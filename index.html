@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Holiday Message</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ff6347;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #2e8b57;
+            font-size: 1.5em;
+            margin-top: -20px;
+        }
+
+        .holiday-image {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 30px;
+            border-radius: 15px;
+        }
+
+        .message-container {
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-container {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="message-container">
+        <h1>🎄 Merry Christmas & Happy New Year! 🎆</h1>
+        <h2> Wishing you a season filled with joy, love, and new beginnings. May the coming year bring you happiness, good health, and wonderful adventures. Cheers to special moments ahead! 🎉✨</h2>
+
+        <img src="photo.jpg" alt="Holiday Image" class="holiday-image">
+
+        <div class="input-container">
+            <label for="name">Enter your name: </label>
+            <input type="text" id="name" placeholder="Your Name">
+            <button onclick="personalizeMessage()">Surprise Me!</button>
+        </div>
+
+    </div>
+
+    <script>
+        function personalizeMessage() {
+            var name = document.getElementById('name').value;
+            var message = document.getElementById('personalizedMessage');
+            if (name) {
+                message.innerHTML = `Dear ${name},<br>Wishing you a magical Christmas and a prosperous New Year! May your days be filled with love, laughter, and endless happiness.`;
+            } else {
+                message.innerHTML = "Please enter your name to receive the surprise!";
+            }
+        }
+    </script>
+
+</body>
+</html>
